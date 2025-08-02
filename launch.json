@@ -1,0 +1,27 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+        "name": "Launch Chrome",
+        "request": "launch",
+        "type": "chrome",
+        "url": "http://localhost:8080",
+        "webRoot": "${workspaceFolder}"
+    },
+
+
+    {
+      "name": "Launch Chrome (localhost)",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:8080",
+      "webRoot": "${workspaceFolder}"
+    },
+    {
+      "name": "Open index.html (local file)",
+      "type": "chrome",
+      "request": "launch",
+      "file": "c:\\Users\\ELCOT\\Desktop\\Meenakshi R\\My Portfolio\\index.html"
+    }
+  ]
+}

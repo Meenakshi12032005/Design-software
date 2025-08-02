@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Get Started - BrandZone</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .form-container {
+      max-width: 500px;
+      margin: 4rem auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    input, textarea, button {
+      width: 100%;
+      padding: 0.8rem;
+      margin: 0.6rem 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    .thank-you {
+      text-align: center;
+      font-size: 1.5rem;
+      color: green;
+      margin-top: 2rem;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1 class="logo">Brand<span>Zone</span></h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="form-container">
+    <h2>Let's Get Started</h2>
+    <form id="startForm">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" required>
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" rows="4" placeholder="How can we help you?"></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <div class="thank-you" id="thankYouMessage">
+      Thank you, <span id="displayName"></span>! We'll be in touch soon.
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 BrandZone. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const form = document.getElementById('startForm');
+    const thankYou = document.getElementById('thankYouMessage');
+    const displayName = document.getElementById('displayName');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault(); // Prevent page reload
+
+      const name = document.getElementById('name').value;
+      displayName.textContent = name;
+
+      form.style.display = 'none';
+      thankYou.style.display = 'block';
+    });
+  </script>
+
+</body>
+</html>
